@@ -21,14 +21,14 @@ Do not run `waf` with `sudo`!  This leads to permission and environment problems
 There are several commands in the build system for advanced usage, but here we
 list some basic and more used commands as example.
 
-* **Build ArduCopter**
+* **Build ArduRover**
 
     Below shows how to build ArduCopter for the Pixhawk2/Cube. Many other boards are
     supported and the next section shows how to get a full list of them.
 
     ```sh
     ./waf configure --board CubeBlack
-    ./waf copter
+    ./waf rover
     ```
 
     The first command should be called only once or when you want to change a
@@ -38,17 +38,17 @@ list some basic and more used commands as example.
 
     ```sh
     ./waf configure --board skyviper-v2450
-    ./waf copter
+    ./waf rover
     ```
 
     If building for the bebop2 the binary must be built statically:
 
     ```sh
     ./waf configure --board bebop --static
-    ./waf copter
+    ./waf rover
     ```    
 
-    The "arducopter" binary should appear in the `build/<board-name>/bin` directory.
+    The "ardurover" binary should appear in the `build/<board-name>/bin` directory.
 
 * **List available boards**
 
@@ -82,13 +82,7 @@ list some basic and more used commands as example.
     Here is a list of the most common vehicle build targets:
 
     ```sh
-    ./waf copter                            # All multirotor types
-    ./waf heli                              # Helicopter types
-    ./waf plane                             # Fixed wing airplanes including VTOL
     ./waf rover                             # Ground-based rovers and surface boats
-    ./waf sub                               # ROV and other submarines
-    ./waf antennatracker                    # Antenna trackers
-    ./waf AP_Periph                         # AP Peripheral
     
     ```
 
